@@ -1,5 +1,5 @@
 {
-  "name": "calculadora-fap",
+  "name": "security-fap",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:calculadora-fap": "node dist/calculadora-fap/server/server.mjs"
+    "serve:ssr:security-fap": "node dist/security-fap/server/server.mjs"
   },
   "private": true,
   "packageManager": "npm@11.9.0",

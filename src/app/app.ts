@@ -8,5 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('calculadora-fap');
+  protected readonly title = signal('security-fap');
 }
