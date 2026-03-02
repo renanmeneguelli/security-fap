@@ -1,6 +1,6 @@
 {
   "routes": {
-    "/security-fap": {},
-    "/security-fap/calculadora": {}
+    "/calculadora-fap": {},
+    "/calculadora-fap/calculadora": {}
   }
 }
