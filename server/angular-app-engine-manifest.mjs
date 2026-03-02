@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/calculadora-fap',
+  basePath: '/security-fap',
   allowedHosts: [],
   supportedLocales: {
   "en-US": ""

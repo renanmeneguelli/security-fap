@@ -2,24 +2,24 @@
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
   inlineCriticalCss: true,
-  baseHref: '/calculadora-fap/',
+  baseHref: '/security-fap/',
   locale: undefined,
   routes: [
   {
     "renderMode": 2,
-    "redirectTo": "/calculadora-fap/calculadora",
-    "route": "/calculadora-fap"
+    "redirectTo": "/security-fap/calculadora",
+    "route": "/security-fap"
   },
   {
     "renderMode": 2,
-    "route": "/calculadora-fap/calculadora"
+    "route": "/security-fap/calculadora"
   }
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 24659, hash: '86ec1ff80af568bee3470e086142442048ee437462fea33e01200a7bd71f8de3', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 17175, hash: '1582520e3e0f8f39f83cb3cd9414d1dc568cb56349816fd51e2a5f5407c20d9b', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'calculadora/index.html': {size: 96702, hash: 'ac06ca962ab9c839a10414891b8b449fb5eea5ef24027320767fb90a9f9fb4c5', text: () => import('./assets-chunks/calculadora_index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 24656, hash: '1ee576b9ccc0050486ffb17b4d56dc8bd353773ff084c5dd09622be60cc39634', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 17172, hash: 'a52abce9a68fd9f670ea53b42a5b4406be76e9c3535826a200b67ccc4db54083', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'calculadora/index.html': {size: 96699, hash: 'f456a41b24c28e4adf180b2718764d8535a3c49625f789e71448c5438a95a1e1', text: () => import('./assets-chunks/calculadora_index_html.mjs').then(m => m.default)},
     'styles-OPUTW5UJ.css': {size: 8043, hash: 'i68XcmjPijU', text: () => import('./assets-chunks/styles-OPUTW5UJ_css.mjs').then(m => m.default)}
   },
 };
