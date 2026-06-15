@@ -1,11 +1,10 @@
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialog, MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 import { PopupResultadoComponent } from './popup-resultado.component';
 
@@ -26,56 +25,24 @@ import { PopupResultadoComponent } from './popup-resultado.component';
 export class Calculadora {
 
   massaSalarial!: number;
-  numCats!: number;
-  diasAfastamento!: number;
-  beneficiosB91!: number;
-  beneficiosB31!: number;
-  cnae!: string;
+  cnae!: number;
   fap!: number;
-  rotatividade!: number;
 
   constructor(private dialog: MatDialog) {}
 
   calcular() {
-  const massa = this.massaSalarial || 1;
 
-  // Índice de Frequência
-  const IF = (this.numCats || 0) / massa;
+    const massa = this.massaSalarial || 0;
+    const cnae = this.cnae || 1;
 
-  // Índice de Gravidade
-  const IG = (
-    (this.diasAfastamento || 0) +
-    (this.beneficiosB91 || 0) * 365 +
-    (this.beneficiosB31 || 0) * 15
-  ) / massa;
+    const resultadoFinal = (massa * cnae) / 100;
 
-  // Índice de Custo
-  const IC = (
-    (this.beneficiosB91 || 0) * 0.91 +
-    (this.beneficiosB31 || 0) * 0.31
-  ) / massa;
-
-  // Índice de Rotatividade
-  const IR = (this.rotatividade || 0) / massa;
-
-  // Soma dos índices
-  const risco = IF + IG + IC;
-
-  // FAP final aplicado
-  const fapFinal = risco * (this.fap || 1);
-
-  this.dialog.open(PopupResultadoComponent, {
-    data: {
-      resultado: `
-        IF = ${IF.toFixed(6)}
-        IG = ${IG.toFixed(6)}
-        IC = ${IC.toFixed(6)}
-        IR = ${IR.toFixed(6)}
-        Risco Total = ${risco.toFixed(6)}
-        FAP Final = ${fapFinal.toFixed(6)}
-      `
-    }
-  });
-}
-
+    this.dialog.open(PopupResultadoComponent, {
+      data: {
+        resultado: `
+          FAP: ${resultadoFinal.toFixed(3)}
+        `
+      }
+    });
+  }
 }
