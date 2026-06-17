@@ -9,7 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
   template: `
     <h2 mat-dialog-title>Resultado</h2>
     <mat-dialog-content>
-      O resultado do cálculo é: 
+      O resultado é: 
       <strong>{{ data.resultado }}</strong>
     </mat-dialog-content>
     <mat-dialog-actions>
