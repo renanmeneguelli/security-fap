@@ -69,17 +69,17 @@ export class Calculadora {
     let retorno = "Valor a  (R$):";
 
     if (resultadoFinal >= 2) {
-        incumprimento = (massa * resultadoFinal) / 14;
-        retorno = "Custo mensal - Neglicência (R$)";
-    } else {
         incumprimento = (massa * resultadoFinal) / 12;
-        retorno = "Custo mensal - Bônus (R$)";
+        retorno = "Neglicência (R$)";
+    } else {
+        incumprimento = (massa * resultadoFinal) / 14;
+        retorno = "Bônus (R$)";
     };
 
     this.dialog.open(PopupResultadoComponent, {
       data: {
         resultado: `
-          FAP Ajustado (%): ${resultadoFinal.toFixed(1)}\n
+          FAP (%): ${resultadoFinal.toFixed(1)}\n
           ${retorno}: ${incumprimento.toFixed(3)}
   `
       }
