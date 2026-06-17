@@ -79,7 +79,7 @@ export class Calculadora {
     this.dialog.open(PopupResultadoComponent, {
       data: {
         resultado: `
-          RAT Austada (%): ${resultadoFinal.toFixed(1)}\n
+          RAT Ajustada (%): ${resultadoFinal.toFixed(1)}\n
           ${retorno}: ${incumprimento.toFixed(3)}
   `
       }
