@@ -2,14 +2,27 @@
   <h2>Cálculo de Indicadores</h2>
 
   <mat-form-field appearance="outline">
-    <mat-label>Massa salarial</mat-label>
-    <input matInput type="number" [(ngModel)]="massaSalarial">
+    <mat-label>Valor da Folha Mensal (R$)</mat-label>
+    <input matInput type="number" [(ngModel)]="massaSalarial" required>
+    <mat-error>Campo obrigatório</mat-error>
   </mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Alíquota RAT</mat-label>
+  <mat-select [(ngModel)]="rat" required>
+    <mat-option [value]="1">1%</mat-option>
+    <mat-option [value]="2">2%</mat-option>
+    <mat-option [value]="3">3%</mat-option>
+  </mat-select>
+</mat-form-field>
 
   <mat-form-field appearance="outline">
-    <mat-label>CNAE</mat-label>
-    <input matInput type="number" [(ngModel)]="cnae">
+    <mat-label>FAP</mat-label>
+    <input matInput type="number" [(ngModel)]="fat" required>
+    <mat-error>Campo obrigatório</mat-error>
   </mat-form-field>
 
-  <button mat-raised-button color="primary" (click)="calcular()">Calcular</button>
+  <button mat-raised-button color="primary" (click)="calcular()">
+    Calcular
+  </button>
 </div>
